@@ -289,3 +289,17 @@ label:first-child {
     border-radius: .3rem;
     box-shadow: 0 0.1rem 0.6rem #000009;
 }
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #20406E;
+    border-radius: 30px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #fff;
+    border-radius: 30px;
+}

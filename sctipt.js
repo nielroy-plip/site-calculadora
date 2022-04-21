@@ -1,3 +1,8 @@
+/*window.scroll({
+    top: 0,
+    behavior: 'smooth'
+});*/
+
 function insert(num) {
    var numero = document.getElementById('resultado1').innerHTML;
    document.getElementById('resultado1').innerHTML = numero + num;

@@ -28,7 +28,7 @@ summary::-webkit-details-marker {
   }
   summary:after {
     background: black; 
-    color: #fff; 
+    color: #DCFEF1; 
     float: left;  
     font-weight: bold; 
     padding: 0; 

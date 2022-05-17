@@ -38,11 +38,17 @@ summary::-webkit-details-marker {
     margin-right: 10px;
 }
 
+header div nav{
+    width: 249px;
+}
+
 #menu ul {
     padding: 0px;
     margin: 0px;
     background-color: #EDEDED;
     list-style: none;
+    display: flex;
+    align-items:center;
 }
 
 #menu ul li {
@@ -302,4 +308,32 @@ label:first-child {
 ::-webkit-scrollbar-thumb {
     background: #fff;
     border-radius: 30px;
+}
+
+#bann {
+    margin-right: 550px;
+    height: 500px;
+    display: none;
+    align-items:flex-start;
+    justify-content:flex-start;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+#bann2 {
+    margin-left: 550px;
+    height: 500px;
+    display: none;
+    align-items:flex-start;
+    justify-content:flex-end;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+footer{
+    background-color: #DCFEF1;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    display: none;
 }

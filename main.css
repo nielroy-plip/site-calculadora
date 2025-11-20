@@ -247,3 +247,20 @@ footer {
     display: flex;
     justify-content: center;
 }
+
+.calc-grid {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 60px);
+    grid-gap: 10px;
+    justify-content: center;
+}
+
+.calc-grid .zero {
+    grid-column: span 2;
+}
+
+.calc-grid .equal {
+    grid-row: span 2;
+    height: 130px !important;
+}

@@ -38,41 +38,34 @@
     <div class="fundo">
         <!-- Calculadora -->
         <div class="calculadora2" id="calculadora">
-            <h1>Calculadora</h1>
-            <p id="resultado1"></p>
+    <h1>Calculadora</h1>
+    <p id="resultado1"></p>
 
-            <table>
-                <tr>
-                    <td><button class="btn" onclick="clean()">C</button></td>
-                    <td><button class="btn" onclick="back()"><</button></td>
-                    <td><button class="btn" onclick="insert('/')">/</button></td>
-                    <td><button class="btn" onclick="insert('*')">x</button></td>
-                </tr>
-                <tr>
-                    <td><button class="btn" onclick="insert('7')">7</button></td>
-                    <td><button class="btn" onclick="insert('8')">8</button></td>
-                    <td><button class="btn" onclick="insert('9')">9</button></td>
-                    <td><button class="btn" onclick="insert('-')">-</button></td>
-                </tr>
-                <tr>
-                    <td><button class="btn" onclick="insert('4')">4</button></td>
-                    <td><button class="btn" onclick="insert('5')">5</button></td>
-                    <td><button class="btn" onclick="insert('6')">6</button></td>
-                    <td><button class="btn" onclick="insert('+')">+</button></td>
-                </tr>
-                <tr>
-                    <td><button class="btn" onclick="insert('1')">1</button></td>
-                    <td><button class="btn" onclick="insert('2')">2</button></td>
-                    <td><button class="btn" onclick="insert('3')">3</button></td>
-                    <td rowspan="2"><button class="btn btn-equal" onclick="calcular()">=</button></td>
-                </tr>
-                <tr>
-                    <td colspan="2"><button class="btn btn-zero" onclick="insert('0')">0</button></td>
-                    <td><button class="btn" onclick="insert('.')">.</button></td>
-                </tr>
-            </table>
-        </div>
+    <div class="calc-grid">
+        <button class="btn" onclick="clean()">C</button>
+        <button class="btn" onclick="back()"><</button>
+        <button class="btn" onclick="insert('/')">/</button>
+        <button class="btn" onclick="insert('*')">x</button>
 
+        <button class="btn" onclick="insert('7')">7</button>
+        <button class="btn" onclick="insert('8')">8</button>
+        <button class="btn" onclick="insert('9')">9</button>
+        <button class="btn" onclick="insert('-')">-</button>
+
+        <button class="btn" onclick="insert('4')">4</button>
+        <button class="btn" onclick="insert('5')">5</button>
+        <button class="btn" onclick="insert('6')">6</button>
+        <button class="btn" onclick="insert('+')">+</button>
+
+        <button class="btn" onclick="insert('1')">1</button>
+        <button class="btn" onclick="insert('2')">2</button>
+        <button class="btn" onclick="insert('3')">3</button>
+        <button class="btn equal" onclick="calcular()">=</button>
+
+        <button class="btn zero" onclick="insert('0')">0</button>
+        <button class="btn" onclick="insert('.')">.</button>
+    </div>
+</div>
         <!-- Anúncio 1 -->
         <div class="ad-container">
             <ins class="adsbygoogle"

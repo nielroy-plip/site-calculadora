@@ -1,165 +1,142 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <title>Calculadora Online Grátis e Conversor de Moedas</title>
 
-    <title>Calculadora</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Calculadora online grátis, rápida e precisa. Faça contas matemáticas e converta moedas como dólar, euro e bitcoin.">
+    <meta name="keywords" content="calculadora online, conversor de moedas, dólar, euro, bitcoin">
+    <meta name="author" content="Calculadora Online">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="main.css">
 
-    <!-- Ícones -->
+    <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/61f71e55fd.js" crossorigin="anonymous"></script>
 
-    <!-- Favicons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
-    <link rel="manifest" href="site.webmanifest" />
-
     <!-- Google AdSense -->
-    <script async 
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3240861483390461" 
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3240861483390461"
         crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <header>
-        <nav id="menu">
-            <ul>
-                <li><a href="#calculadora">Calculadora</a></li>
-                <li><a href="#conversor">Conversor</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <div class="fundo">
-        <!-- Calculadora -->
-        <div class="calculadora2" id="calculadora">
-    <h1>Calculadora</h1>
-    <p id="resultado1"></p>
+<header id="menu">
+    <nav>
+        <ul>
+            <li><a href="#calculadora">Calculadora</a></li>
+            <li><a href="#conteudo">Sobre</a></li>
+            <li><a href="#conversor">Conversor</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <div class="calc-grid">
-        <button class="btn" onclick="clean()">C</button>
-        <button class="btn" onclick="back()"><</button>
-        <button class="btn" onclick="insert('/')">/</button>
-        <button class="btn" onclick="insert('*')">x</button>
+<main>
 
-        <button class="btn" onclick="insert('7')">7</button>
-        <button class="btn" onclick="insert('8')">8</button>
-        <button class="btn" onclick="insert('9')">9</button>
-        <button class="btn" onclick="insert('-')">-</button>
+<!-- ================= CALCULADORA ================= -->
+<section class="fundo" id="calculadora">
+    <div class="calculadora">
+        <h1>Calculadora Online</h1>
 
-        <button class="btn" onclick="insert('4')">4</button>
-        <button class="btn" onclick="insert('5')">5</button>
-        <button class="btn" onclick="insert('6')">6</button>
-        <button class="btn" onclick="insert('+')">+</button>
+        <input type="text" id="resultado1" readonly>
 
-        <button class="btn" onclick="insert('1')">1</button>
-        <button class="btn" onclick="insert('2')">2</button>
-        <button class="btn" onclick="insert('3')">3</button>
-        <button class="btn equal" onclick="calcular()">=</button>
+        <div class="grid">
+            <button onclick="clean()">C</button>
+            <button onclick="back()">⌫</button>
+            <button onclick="insert('/')">÷</button>
+            <button onclick="insert('*')">×</button>
 
-        <button class="btn zero" onclick="insert('0')">0</button>
-        <button class="btn" onclick="insert('.')">.</button>
-    </div>
-</div>
-        <!-- Anúncio 1 -->
-        <div class="ad-container">
-            <ins class="adsbygoogle"
-                style="display:block"
-                data-ad-client="ca-pub-3240861483390461"
-                data-ad-slot="1234567890"
-                data-ad-format="auto"
-                data-full-width-responsive="true"></ins>
-        </div>
-        <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
+            <button onclick="insert('7')">7</button>
+            <button onclick="insert('8')">8</button>
+            <button onclick="insert('9')">9</button>
+            <button onclick="insert('-')">−</button>
 
-        <!-- Anúncio 2 -->
-        <div class="ad-container">
-            <ins class="adsbygoogle"
-                style="display:block"
-                data-ad-client="ca-pub-3240861483390461"
-                data-ad-slot="1234567890"
-                data-ad-format="auto"
-                data-full-width-responsive="true"></ins>
-        </div>
-        <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-    </div>
+            <button onclick="insert('4')">4</button>
+            <button onclick="insert('5')">5</button>
+            <button onclick="insert('6')">6</button>
+            <button onclick="insert('+')">+</button>
 
-    <!-- Informações adicionais -->
-    <div class="fundo" id="comousar">
-        <details>
-            <summary><h2>Sobre a calculadora</h2></summary>
-            <p>Calculadora é um dispositivo para a realização de cálculos numéricos...</p>
-        </details>
+            <button onclick="insert('1')">1</button>
+            <button onclick="insert('2')">2</button>
+            <button onclick="insert('3')">3</button>
+            <button class="igual" onclick="calcular()">=</button>
 
-        <details>
-            <summary><h2>Como usar</h2></summary>
-            <h3>Clique nos números e na operação desejada.</h3>
-            <h3>* Multiplicação</h3>
-            <h3>/ Divisão</h3>
-            <h3>- Subtração</h3>
-            <h3>+ Adição</h3>
-            <h3>= Mostrar resultado</h3>
-        </details>
-
-        <!-- Conversor -->
-        <div class="fundo conversor" id="conversor">
-            <h1>Conversor de Moedas</h1>
-
-            <section class="conteudos">
-                <div class="form-group">
-                    <label for="valorEmReal">R$</label>
-                    <input type="number" id="valorEmReal" class="input"
-                           step="0.01" min="0.00" max="9999999999.99"
-                           oninput="ativarBotao()" required />
-                </div>
-
-                <div class="form-group radios">
-                    <label><input type="radio" name="moedaEstrangeira" value="Dólar" /> Dólar</label>
-                    <label><input type="radio" name="moedaEstrangeira" value="Euro" /> Euro</label>
-                    <label><input type="radio" name="moedaEstrangeira" value="Libra" /> Libra</label>
-                    <label><input type="radio" name="moedaEstrangeira" value="Bitcoins" /> Bitcoins</label>
-                </div>
-
-                <div class="form-group">
-                    <button class="botao desativado" id="btnConverter" onclick="bloquearBotao()" disabled>Converter</button>
-                    <button type="reset" id="btnLimpar" class="botao">Limpar</button>
-                </div>
-            </section>
-
-            <p id="aviso" class="centro">Digite o valor, escolha a moeda e clique em converter</p>
+            <button class="zero" onclick="insert('0')">0</button>
+            <button onclick="insert('.')">.</button>
         </div>
     </div>
 
-    <!-- Topo -->
-    <a href="#menu" id="link-topo">
-        <i class="fa-solid fa-arrow-up"></i>
-    </a>
+    <!-- Anúncio -->
+    <ins class="adsbygoogle"
+        style="display:block; margin-top:20px"
+        data-ad-client="ca-pub-3240861483390461"
+        data-ad-slot="1234567890"
+        data-ad-format="auto"
+        data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</section>
 
-    <!-- Rodapé com anúncio -->
-    <footer>
-        <div class="ad-container">
-            <ins class="adsbygoogle"
-                style="display:block"
-                data-ad-client="ca-pub-3240861483390461"
-                data-ad-slot="1234567890"
-                data-ad-format="auto"
-                data-full-width-responsive="true"></ins>
-        </div>
-        <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-    </footer>
+<!-- ================= CONTEÚDO EDITORIAL ================= -->
+<section class="fundo" id="conteudo">
+    <article class="conteudo">
+        <h2>O que é uma Calculadora Online?</h2>
+        <p>
+            Uma calculadora online é uma ferramenta digital que permite realizar cálculos matemáticos
+            diretamente no navegador, sem necessidade de instalação. É prática, rápida e acessível
+            em qualquer dispositivo.
+        </p>
 
-    <!-- Script principal -->
-    <script src="script.js"></script>
+        <h2>Como funciona nossa calculadora</h2>
+        <p>
+            Basta clicar nos números e operações desejadas. O resultado é exibido instantaneamente,
+            facilitando cálculos do dia a dia, estudos ou trabalho.
+        </p>
+
+        <h2>Vantagens</h2>
+        <ul>
+            <li>Funciona no celular e computador</li>
+            <li>Não precisa instalar nada</li>
+            <li>Interface simples</li>
+            <li>Totalmente gratuita</li>
+        </ul>
+    </article>
+</section>
+
+<!-- ================= CONVERSOR ================= -->
+<section class="fundo conversor" id="conversor">
+    <h1>Conversor de Moedas</h1>
+
+    <div class="form-group">
+        <label>Valor em Reais (R$)</label>
+        <input type="number" id="valorEmReal" step="0.01">
+    </div>
+
+    <div class="form-group radios">
+        <label><input type="radio" name="moeda" value="dolar"> Dólar</label>
+        <label><input type="radio" name="moeda" value="euro"> Euro</label>
+        <label><input type="radio" name="moeda" value="libra"> Libra</label>
+        <label><input type="radio" name="moeda" value="bitcoin"> Bitcoin</label>
+    </div>
+
+    <button class="botao" onclick="converter()">Converter</button>
+    <p id="aviso"></p>
+</section>
+
+</main>
+
+<footer>
+    <p>© 2026 - Calculadora Online Grátis</p>
+
+    <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-3240861483390461"
+        data-ad-slot="1234567890"
+        data-ad-format="auto"
+        data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
